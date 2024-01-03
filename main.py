@@ -36,7 +36,7 @@ def update_particle(particle, M, dt):
     if len(sol.y[0]) > 0:
         particle['position'] = sol.y[0][-1]
         particle['velocity'] = sol.y[1][-1]
-        particle['proper_time'] += sol.y[4][-1]  # Accumulate proper time
+        particle['proper_time'] += sol.y[4][-1]
 
     particle['time_dilation'] = calculate_time_dilation(particle['position'], M)
 
