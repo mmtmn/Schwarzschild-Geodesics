@@ -44,13 +44,13 @@ def update_particle(particle, M, dt):
 
 # Main simulation loop with visualization
 running = True
-particles = [{'position': 1e11, 'velocity': 0, 'proper_time': 0}]  # Include 'proper_time' here
+particles = [{'position': 1e11, 'velocity': 0, 'proper_time': 0}]
 star_mass = 1.989e+30
 dt = 100
 iterations = 0
 particle_positions = []
 
-while running and iterations < 500:  # Increased iterations for a better plot
+while running and iterations < 500:  # Increase iterations for a better plot
     for particle in particles:
         particle = update_particle(particle, star_mass, dt)
         particle_positions.append(particle['position'])
